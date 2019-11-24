@@ -18,15 +18,15 @@
     "coverageReporters": [
       "cobertura",
       "html",
-	  "text"
+      "text"
     ],
-	"collectCoverageFrom": [
-		"**/*.{js,jsx}",
-		"!**/node_modules/**",
-		"!**/vendor/**",
-		"!src/serviceWorker.js",
-		"!src/index.js"
-	  ]
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!src/serviceWorker.js",
+      "!src/index.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +47,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/react-hooks": "^3.2.1",
     "jest-junit": "^9.0.0",
+    "prettier": "1.19.1",
     "react-test-renderer": "^16.12.0"
   }
 }

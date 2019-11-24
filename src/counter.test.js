@@ -1,21 +1,21 @@
-import React from 'react';
-import Counter, {useCounter} from './counter';
-import { renderHook, act } from '@testing-library/react-hooks'
+import React from "react";
+import Counter, { useCounter } from "./counter";
+import { renderHook, act } from "@testing-library/react-hooks";
 
-test('increment', () => {
-  const { result } = renderHook(() => useCounter())
+test("increment", () => {
+  const { result } = renderHook(() => useCounter());
   act(() => {
-    result.current.increment()
-  })
+    result.current.increment();
+  });
 
-  expect(result.current.count).toBe(1)
-})
+  expect(result.current.count).toBe(1);
+});
 
-test('decrement', () => {
-  const { result } = renderHook(() => useCounter())
+test("decrement", () => {
+  const { result } = renderHook(() => useCounter());
   act(() => {
-    result.current.decrement()
-  })
+    result.current.decrement();
+  });
 
-  expect(result.current.count).toBe(-1)
-})
+  expect(result.current.count).toBe(-1);
+});
