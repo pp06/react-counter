@@ -1,21 +1,15 @@
 import React from "react";
-import Counter, { useCounter } from "./counter";
-import { renderHook, act } from "@testing-library/react-hooks";
+import ReactDOM from "react-dom";
+import Counter from "./counter";
+import CounterProvider from "./CounterProvider";
 
-test("increment", () => {
-  const { result } = renderHook(() => useCounter());
-  act(() => {
-    result.current.increment();
-  });
-
-  expect(result.current.count).toBe(1);
-});
-
-test("decrement", () => {
-  const { result } = renderHook(() => useCounter());
-  act(() => {
-    result.current.decrement();
-  });
-
-  expect(result.current.count).toBe(-1);
+it("renders without crashing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(
+    <CounterProvider>
+      <Counter />
+    </CounterProvider>,
+    div
+  );
+  ReactDOM.unmountComponentAtNode(div);
 });
